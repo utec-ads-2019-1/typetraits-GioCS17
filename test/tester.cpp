@@ -27,6 +27,7 @@ void Tester::execute() {
         ASSERT(isSorted(integers), "The integers list has problems");
         ASSERT(isSorted(floats), "The floats list has problems");
     }
+    cout<<"\033[1;32mCongratulations! Hiciste todo bien :)\033[0m"<<endl;
 }
 
 template <typename T>

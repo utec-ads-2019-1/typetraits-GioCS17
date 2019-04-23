@@ -12,6 +12,7 @@ struct Node {
     };
       
     void killSelf();
+    void killOnlyMe();
 };
 
 template <typename T>
@@ -20,6 +21,10 @@ void Node<T>::killSelf() {
         next->killSelf();
     }
     
+    delete this;
+}
+template <typename T>
+void Node<T>::killOnlyMe() {
     delete this;
 }
 

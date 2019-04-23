@@ -25,15 +25,14 @@ class Mocker {
         template <typename T>
         T* generateRandomArray(unsigned int size) {
             T *elements = new T[size];
-            for (int i = 0; i < size; i++) {
-                if (is_same<T, int>::value) {
+            for (int i = 0; i < size; i++){
+                if (is_same<T, int>::value){
                     elements[i] = generateRandomInt();
                 }
                 else if (is_same<T, char>::value) {
                     elements[i] = generateRandomChar();
                 }
             }
-
             return elements;
         }
 };
